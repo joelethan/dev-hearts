@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { FC } from 'react'
 import Image from 'next/image'
 import Box from '@mui/material/Box'
