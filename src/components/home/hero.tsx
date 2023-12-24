@@ -18,15 +18,15 @@ interface ExpItemProps {
 
 const exps: Array<Exp> = [
   {
-    label: 'Students',
-    value: '10K+',
+    label: 'Enroll Students',
+    value: '90+',
   },
   {
-    label: 'Quality Course',
-    value: '20+',
+    label: 'Community Outreaches',
+    value: '10+',
   },
   {
-    label: 'Experience Mentors',
+    label: 'Experienced Mentors',
     value: '10+',
   },
 ]
@@ -83,7 +83,7 @@ const HomeHero: FC = () => {
                       backgroundColor: 'unset',
                     }}
                   >
-                    Improve{' '}
+                    Giving{' '}
                     <Box
                       sx={{
                         position: 'absolute',
@@ -97,7 +97,7 @@ const HomeHero: FC = () => {
                       <img src="/images/headline-curve.svg" alt="Headline curve" />
                     </Box>
                   </Typography>
-                  your{' '}
+                  back{' '}
                   <Typography
                     component="span"
                     sx={{
@@ -113,7 +113,7 @@ const HomeHero: FC = () => {
                       },
                     }}
                   >
-                    Skill
+                    through
                     <svg version="1.1" viewBox="0 0 3183 3072">
                       <g id="Layer_x0020_1">
                         <path
@@ -132,33 +132,34 @@ const HomeHero: FC = () => {
                     </svg>
                   </Typography>{' '}
                   <br />
-                  with Different Way
+                  Impactful coding.
+                  {/* A community of experienced developers using their skills and knowledge to give back to their communities and empower others */}
                 </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
                   {
-                    "Let's take an online course to improve your skills in a different way, you can set your own study time according to your learning speed. So you san study comfortable and absorb tge material easily."
+                    "A close-knit community of experienced developers leveraging their skills and knowledge to give back, empower others, and foster positive change in communities."
                   }
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
                 <ScrollLink to="popular_course" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="contained">
-                    Get Started
+                    Book Session
                   </StyledButton>
                 </ScrollLink>
-                <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
+                {/* <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrowIcon />}>
                     Watch Video
                   </StyledButton>
-                </ScrollLink>
+                </ScrollLink> */}
               </Box>
             </Box>
           </Grid>
           <Grid item xs={12} md={5} sx={{ position: 'relative' }}>
             {/* Certificate badge */}
-            <Box
+            {/* <Box
               sx={{
                 position: 'absolute',
                 bottom: 30,
@@ -200,7 +201,7 @@ const HomeHero: FC = () => {
                   There are certificates for all courses.
                 </Typography>
               </Box>
-            </Box>
+            </Box> */}
             <Box sx={{ lineHeight: 0 }}>
               <Image src="/images/home-hero.jpg" width={775} height={787} alt="Hero img" />
             </Box>

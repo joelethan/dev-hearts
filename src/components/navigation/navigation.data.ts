@@ -10,11 +10,15 @@ export const navigations: Navigation[] = [
     path: 'popular_course', // '/popular_course',
   },
   {
-    label: 'Testimonial',
-    path: 'testimonial', // '/testimonial',
+    label: 'Events',
+    path: 'events', // '/testimonial',
   },
   {
     label: 'Mentor',
     path: 'mentors', // '/mentors',
+  },
+  {
+    label: 'Donate',
+    path: 'donate', // '/donate',
   },
 ]
