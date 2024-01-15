@@ -1,16 +1,16 @@
-import React, { FC } from 'react'
-import Image from 'next/image'
+import { SessionButton } from '@/components/buttons'
 import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
+import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import { Link as ScrollLink } from 'react-scroll'
-import { StyledButton } from '@/components/styled-button'
-import PlayArrowIcon from '@mui/icons-material/PlayArrow'
+import Image from 'next/image'
+import { FC, useEffect, useState } from 'react'
+import { PopupWidget } from "react-calendly"
 
 interface Exp {
   label: string
   value: string
+  id: number
 }
 interface ExpItemProps {
   item: Exp
@@ -20,14 +20,17 @@ const exps: Array<Exp> = [
   {
     label: 'Enroll Students',
     value: '90+',
+    id: 1,
   },
   {
     label: 'Community Outreaches',
     value: '10+',
+    id: 2,
   },
   {
     label: 'Experienced Mentors',
     value: '10+',
+    id: 3,
   },
 ]
 
@@ -48,6 +51,13 @@ const ExpItem: FC<ExpItemProps> = ({ item }) => {
 }
 
 const HomeHero: FC = () => {
+  const [_document, setDocument] = useState<any>(null);
+  const sessionLink = "https://calendly.com/devhearts/mentoring";
+
+  useEffect(() => {
+    setDocument(document);
+  }, []);
+
   return (
     <Box id="hero" sx={{ backgroundColor: 'background.paper', position: 'relative', pt: 4, pb: { xs: 8, md: 10 } }}>
       <Container maxWidth="lg">
@@ -133,22 +143,31 @@ const HomeHero: FC = () => {
                   </Typography>{' '}
                   <br />
                   Impactful coding.
-                  {/* A community of experienced developers using their skills and knowledge to give back to their communities and empower others */}
                 </Typography>
               </Box>
               <Box sx={{ mb: 4, width: { xs: '100%', md: '70%' } }}>
                 <Typography sx={{ color: 'text.secondary', lineHeight: 1.6 }}>
-                  {
-                    "A close-knit community of experienced developers leveraging their skills and knowledge to give back, empower others, and foster positive change in communities."
-                  }
+                  A close-knit community of experienced developers leveraging their skills and knowledge to give back, empower others, and foster positive change in communities.
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
-                <ScrollLink to="popular_course" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="contained">
-                    Book Session
-                  </StyledButton>
-                </ScrollLink>
+                <div id="session-widget"></div>
+                <SessionButton />
+                {_document && <PopupWidget
+                  url={sessionLink}
+                  rootElement={_document.getElementById("session-widget") as HTMLElement}
+                  text="Book a Session!"
+                  textColor="#ffffff"
+                  color="#00a2ff"
+                  // color="#127C71"
+                />}
+
+                {/* {_document && <PopupButton
+                  url={sessionLink}
+                  rootElement={_document.getElementById("session-widget") as HTMLElement}
+                  text="Book a Session!"
+                />} */}
+
                 {/* <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
                   <StyledButton color="primary" size="large" variant="outlined" startIcon={<PlayArrowIcon />}>
                     Watch Video
@@ -212,7 +231,7 @@ const HomeHero: FC = () => {
         <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
           <Grid container spacing={2}>
             {exps.map((item) => (
-              <Grid key={item.value} item xs={12} md={4}>
+              <Grid key={item.id} item xs={12} md={4}>
                 <ExpItem item={item} />
               </Grid>
             ))}

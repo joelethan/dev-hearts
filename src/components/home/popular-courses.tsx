@@ -79,7 +79,7 @@ const HomePopularCourse: FC = () => {
 
   return (
     <Box
-      id="popular_course"
+      id="services"
       sx={{
         pt: {
           xs: 6,
@@ -102,7 +102,9 @@ const HomePopularCourse: FC = () => {
               }}
             >
               <Typography variant="h1" sx={{ mt: { xs: 0, md: -5 }, fontSize: { xs: 30, md: 48 } }}>
-                Our Influential Services
+                <span>Our</span>{' '}
+                <span style={{ whiteSpace: "nowrap" }}>Cutting-Edge</span>{' '}
+                <span>Services</span>
               </Typography>
             </Box>
           </Grid>

@@ -7,6 +7,8 @@ import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import CircularProgress from '@mui/material/CircularProgress'
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress'
+
+import { data as services } from './services.data'
 import { data } from './feature.data'
 
 interface LinearProgressProps {
@@ -32,8 +34,22 @@ const BorderLinearProgress = styled(LinearProgress, {
     ...(order === 3 && {
       backgroundColor: '#0063ff',
     }),
+    ...(order === 4 && {
+      backgroundColor: '#00ff63',
+    }),
   },
 }))
+
+const progress = 75;
+function studentGrading(score: number): string {
+  if (score < 50) {
+      return "Poor Performance";
+  } else if (score < 65) {
+      return "Good Performance";
+  } else {
+      return "Excellent Performance";
+  }
+}
 
 const HomeFeature: FC = () => {
   return (
@@ -58,28 +74,18 @@ const HomeFeature: FC = () => {
                 }}
               >
                 <Typography variant="h5" sx={{ mb: 1 }}>
-                  Lorem ipsum dolor
+                  Services We Offer
                 </Typography>
-                <Box sx={{ mb: 2 }}>
-                  <Typography variant="subtitle1" color="text.secondary">
-                    UI/UI Design
-                  </Typography>
-                  <BorderLinearProgress variant="determinate" color="inherit" value={65} order={1} />
-                </Box>
-                <Box sx={{ mb: 2 }}>
-                  <Typography variant="subtitle1" color="text.secondary">
-                    Mobile Development
-                  </Typography>
-                  <BorderLinearProgress variant="determinate" color="inherit" value={40} order={2} />
-                </Box>
-                <Box sx={{ mb: 2 }}>
-                  <Typography variant="subtitle1" color="text.secondary">
-                    Web Development
-                  </Typography>
-                  <BorderLinearProgress variant="determinate" color="inherit" value={50} order={3} />
-                </Box>
+                {services.map(({ id, value, name }) => (
+                  <Box key={id} sx={{ mb: 2 }}>
+                    <Typography variant="subtitle1" color="text.secondary">
+                      {name}
+                    </Typography>
+                    <BorderLinearProgress variant="determinate" color="inherit" value={value} order={id} />
+                  </Box>
+                ))}
               </Box>
-
+              
               <Box
                 sx={{
                   position: 'absolute',
@@ -103,10 +109,10 @@ const HomeFeature: FC = () => {
                     flexDirection: 'column',
                   }}
                 >
-                  <Typography sx={{ fontWeight: 600, lineHeight: 1 }}>Lorem ipsum</Typography>
-                  <Typography variant="subtitle1" sx={{ mb: 1, color: 'text.disabled' }}>
-                    Lorem ipsum
-                  </Typography>
+                  <Typography sx={{ fontWeight: 600, lineHeight: 1 }}>{studentGrading(progress)}</Typography>
+                  {/* <Typography variant="subtitle1" sx={{ mb: 1, color: '#32dc88' }}>
+                    {comment}
+                  </Typography> */}
                   <Box
                     sx={{
                       height: 85,
@@ -117,8 +123,8 @@ const HomeFeature: FC = () => {
                       flexDirection: 'column',
                     }}
                   >
-                    <Typography variant="h4" sx={{ color: '#32dc88' }}>
-                      75%
+                    <Typography variant="h4" sx={{ fontWeight: 600, color: '#32dc88' }}>
+                      {`${progress}%`}
                     </Typography>
                     <CircularProgress
                       sx={{ position: 'absolute', color: 'divider' }}

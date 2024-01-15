@@ -78,7 +78,7 @@ const HomeTestimonial: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              Testimonies & Events What our{' '}
+              Events & Testimonies Our{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -102,7 +102,7 @@ const HomeTestimonial: FC = () => {
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
               </Typography>
-              Say
+              Have To Say
             </Typography>
 
             <StyledSlickContainer>
