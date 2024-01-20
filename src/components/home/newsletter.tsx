@@ -6,6 +6,9 @@ import Typography from '@mui/material/Typography'
 import { StyledButton } from '@/components/buttons'
 
 const HomeNewsLetter: FC = () => {
+  // const { handleSubmit, reset, control, setValue } = useForm<IFormInput>({
+  //   defaultValues: defaultValues,
+  // });
   return (
     <Box sx={{ backgroundColor: 'background.paper', py: { xs: 8, md: 10 } }}>
       <Container>
@@ -46,7 +49,7 @@ const HomeNewsLetter: FC = () => {
               placeholder="Enter your Email Address"
             />
             <Box>
-              <StyledButton disableHoverEffect size="large">
+              <StyledButton onClick={() => console.log("....")} disableHoverEffect size="large">
                 Subscribe
               </StyledButton>
             </Box>
