@@ -9,16 +9,16 @@ export const navigations: Navigation[] = [
     label: 'Services',
     path: 'services', // '/services',
   },
-  {
-    label: 'Events',
-    path: 'events', // '/events',
-  },
+  // {
+  //   label: 'Events',
+  //   path: 'events', // '/events',
+  // },
   {
     label: 'Mentors',
     path: 'mentors', // '/mentors',
   },
-  {
-    label: 'Donate',
-    path: 'donate', // '/donate',
-  },
+  // {
+  //   label: 'Donate',
+  //   path: 'donate', // '/donate',
+  // },
 ]

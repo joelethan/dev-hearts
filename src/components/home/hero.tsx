@@ -152,7 +152,7 @@ const HomeHero: FC = () => {
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
                 <div id="session-widget"></div>
-                <SessionButton />
+                {/* <SessionButton /> */}
                 {_document && <PopupWidget
                   url={sessionLink}
                   rootElement={_document.getElementById("session-widget") as HTMLElement}
