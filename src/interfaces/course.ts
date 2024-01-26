@@ -4,6 +4,6 @@ export interface Course {
   cover: string
   rating: number
   ratingCount: number
-  price: number
+  price: number | string
   category: string
 }

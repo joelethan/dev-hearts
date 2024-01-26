@@ -58,10 +58,13 @@ const CourseCardItem: FC<Props> = ({ item }) => {
         </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <Typography variant="h5" color="primary.main">
+            {item.id !== 6 && <Typography variant="h5" color="primary.main">
               {'$' + item.price}
-            </Typography>
-            <Typography variant="h6">/ course</Typography>
+            </Typography>}
+            {item.id !== 6 && <Typography variant="h6">/ session</Typography>}
+            {item.id === 6 && <Typography variant="h6" color="primary.main">
+              Group Size Dependant
+            </Typography>}
           </Box>
           <IconButton
             color="primary"
