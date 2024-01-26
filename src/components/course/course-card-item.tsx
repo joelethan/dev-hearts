@@ -12,6 +12,17 @@ interface Props {
 }
 
 const CourseCardItem: FC<Props> = ({ item }) => {
+// const priceComponent =
+//   item.id === 6 ? <Typography variant='h6'>Dependant on the group Size</Typography> : 
+
+  
+  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+  <Typography variant="h5" color="primary.main">
+    {'$' + item.price}
+  </Typography>
+  <Typography variant='h6'>/ session</Typography>
+</Box>
+
   return (
     <Box
       sx={{

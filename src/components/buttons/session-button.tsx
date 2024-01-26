@@ -9,7 +9,7 @@ const SessionButton: FC<SButtonProps> = ({ id }) => {
   console.log(id);
   return (
     <StyledButton onClick={() => console.log("....")} color="primary" size="large" variant="contained">
-      Apply to Volunteer
+      Book a Session
     </StyledButton>
   )
 }

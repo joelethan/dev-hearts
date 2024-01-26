@@ -3,7 +3,8 @@ import type { Mentor } from '@/interfaces/mentor'
 export const data: Array<Mentor> = [
   {
     id: 1,
-    photo: '/images/mentors/christian-buehner-DItYlc26zVI-unsplash.jpg',
+    // photo: '/images/mentors/christian-buehner-DItYlc26zVI-unsplash.jpg',
+    photo: '/images/mentors/mentor-joel-katusiime.jpg',
     name: 'Joel Katusiime',
     category: 'Senior Software Engineer & Developer',
     description:
@@ -15,7 +16,8 @@ export const data: Array<Mentor> = [
   },
   {
     id: 2,
-    photo: '/images/mentors/jonas-kakaroto-KIPqvvTOC1s-unsplash.jpg',
+    // photo: '/images/mentors/jonas-kakaroto-KIPqvvTOC1s-unsplash.jpg',
+    photo: '/images/mentors/mentor-akram-mukasa.jpeg',
     name: 'Akram Mukasa',
     category: 'Senior Software Mentor & Developer',
     description:
