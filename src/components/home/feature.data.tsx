@@ -12,23 +12,23 @@ interface Data {
 
 export const data: Data[] = [
   {
-    title: 'Easy Accessable',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    title: 'Easy Accessible',
+    description: 'Our mentorship program ensures convenient accessibility, allowing aspiring software developers to seamlessly connect with mentors and resources',
     icon: <ArtTrackIcon />,
   },
   {
     title: 'More Affordable Cost',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'Experience top-tier mentorship at a fraction of the cost, making professional software development guidance accessible to a broader audience',
     icon: <AttachMoneyIcon />,
   },
   {
     title: 'Flexible Study Time',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'A learning journey with the flexibility to choose study times that suit your schedule, enabling you to balance mentorship with other commitments',
     icon: <LocalLibraryIcon />,
   },
   {
     title: 'Consultation With Mentor',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    description: 'Guidance through one-on-one consultations with experienced mentors, fostering a supportive environment for your software development growth',
     icon: <ContactSupportIcon />,
   },
 ]
