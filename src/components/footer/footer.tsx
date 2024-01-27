@@ -19,7 +19,7 @@ const Footer: FC = () => {
                 DevHearts
               </Typography>
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                DevHearts is an online learning platform that has been operating since 2018 until now.
+                DevHearts is an online learning platform that has been operating since 2020 until now.
               </Typography>
               <FooterSocialLinks />
             </Box>

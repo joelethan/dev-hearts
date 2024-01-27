@@ -6,6 +6,7 @@ export const data: Array<Mentor> = [
     // photo: '/images/mentors/christian-buehner-DItYlc26zVI-unsplash.jpg',
     photo: '/images/mentors/mentor-joel-katusiime.jpg',
     name: 'Joel Katusiime',
+    linkedin: "https://www.linkedin.com/in/joelkatsme/",
     category: 'Senior Software Engineer & Developer',
     description:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -19,7 +20,8 @@ export const data: Array<Mentor> = [
     // photo: '/images/mentors/jonas-kakaroto-KIPqvvTOC1s-unsplash.jpg',
     photo: '/images/mentors/mentor-akram-mukasa.jpeg',
     name: 'Akram Mukasa',
-    category: 'Senior Software Mentor & Developer',
+    linkedin: "https://www.linkedin.com/in/akram-mukasa-14b4a516a/",
+    category: 'Senior Software QA Engineer & Developer',
     description:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     company: {
@@ -29,9 +31,11 @@ export const data: Array<Mentor> = [
   },
   {
     id: 3,
-    photo: '/images/mentors/noah-buscher-8A7fD6Y5VF8-unsplash.jpg',
+    // photo: '/images/mentors/noah-buscher-8A7fD6Y5VF8-unsplash.jpg',
+    photo: '/images/mentors/mentor-sam-rubarema.jpeg',
     name: 'Sam Rubarema',
-    category: 'Senior Software Mentor',
+    linkedin: "https://www.linkedin.com/in/rubarema-sam/",
+    category: 'Senior Software Engineer',
     description:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     company: {
@@ -43,7 +47,8 @@ export const data: Array<Mentor> = [
     id: 4,
     photo: '/images/mentors/philip-martin-5aGUyCW_PJw-unsplash.jpg',
     name: 'Ethan Arinaitwe',
-    category: 'Fullstack Development',
+    linkedin: "https://www.linkedin.com/in/joelkatsme/",
+    category: 'Senior Fullstack Developer',
     description:
       'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     company: {

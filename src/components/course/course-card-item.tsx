@@ -72,7 +72,7 @@ const CourseCardItem: FC<Props> = ({ item }) => {
             {item.id !== 6 && <Typography variant="h5" color="primary.main">
               {'$' + item.price}
             </Typography>}
-            {item.id !== 6 && <Typography variant="h6">/ course</Typography>}
+            {item.id !== 6 && <Typography variant="h6">/ session</Typography>}
             {item.id === 6 && <Typography variant="h6" color="primary.main">
               Group Size Dependant
             </Typography>}
