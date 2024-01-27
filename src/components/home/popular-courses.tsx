@@ -18,7 +18,7 @@ interface SliderArrowArrow {
   className?: 'string'
 }
 
-const SliderArrow: FC<SliderArrowArrow> = (props: { onClick: any; type: any; className: any }) => {
+const SliderArrow: FC<SliderArrowArrow> = (props) => {
   const { onClick, type, className } = props
   return (
     <IconButton
@@ -71,7 +71,7 @@ const HomePopularCourse: FC = () => {
     prevArrow: <SliderArrow type="prev" />,
     nextArrow: <SliderArrow type="next" />,
     dots: true,
-    appendDots: (dots: any) => <StyledDots>{dots}</StyledDots>,
+    appendDots: (dots) => <StyledDots>{dots}</StyledDots>,
     customPaging: () => (
       <Box sx={{ height: 8, width: 30, backgroundColor: 'divider', display: 'inline-block', borderRadius: 4 }} />
     ),
