@@ -40,7 +40,7 @@ const BorderLinearProgress = styled(LinearProgress, {
   },
 }))
 
-const progress = 75;
+const progress = 87;
 function studentGrading(score: number): string {
   if (score < 50) {
       return "Poor Performance";
